@@ -2,7 +2,7 @@ https://tailwindcss.com
 
 Integrate Methods
 1.Using CDN Link ( Content Deliver Network )
-2.Using Tailwind CLI
+2.Using Tailwind CLI (Command-Line Interface)
 3.Using PostCSS
 
 
@@ -19,6 +19,40 @@ node -v
 
 1.Using CDN Link ( Content Deliver Network )
 <script src="https://cdn.tailwindcss.com"></script>
+
+2.Using Tailwind CLI 
+=open folder "usingcli"
+=open terminal (npm = Node Package Manager)
+npm install -D tailwindcss
+=>Create tailwind.config file (npx = Node Package Execute)
+npx tailwindcss init
+
+=>Configure your template paths 
+=go to tailwind.config.js 
+=add write down in content:["./public/**/*.{html,js}"]
+  . = current folder 
+  ** = all folder of inside in public folder 
+  * = all html files 
+
+=>Create Tailwind main files
+=create new folder and naming "tailwind"
+=create new file and naming "main.css" in "tailwind" folder
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+=>Build process
+=write down "npm init -y" in terminal (so it will create package.json )
+= write down in package.json > "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tailwind -i ./tailwind/main.css -o ./public/tailwind.css"
+  }
+
+  -i = install
+  -o = open 
+
+ 
 
 3.Using PostCSS 
 =open folder "usingpostcss"
