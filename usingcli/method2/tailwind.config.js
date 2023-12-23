@@ -3,12 +3,14 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         'myani': 'mykeyone 5s linear infinite alternate',
         'myrotate': 'mykeytwo 5s linear infinite',
         'yourani': 'mykeythree 5s linear infinite'
       },
+
       keyframes: {
         mykeyone: {
           '0%': { transform: 'translate(0)' },
@@ -22,7 +24,31 @@ module.exports = {
         mykeythree: {
           '0%,100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(-1turn)' }
-        }
+        },
+      },
+
+      colors: {
+        primary: "blue",
+        secondary: "silver",
+        info: "skyblue",
+        warning: "orange",
+        danger: "red"
+      },
+
+      fontFamily: {
+        aria: ["Arial", "san-serif"],
+        times: "Times New Roman",
+        mono: "monospace",
+        stick: ['Stick', 'sans-serif']
+      },
+
+      spacing: {
+        13: "3.3rem",
+        15: "3.8rem",
+        sm: "8px",
+        md: "12px",
+        lg: "16px",
+        xl: "24px"
       }
     },
   },
